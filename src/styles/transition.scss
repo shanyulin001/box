@@ -1,0 +1,27 @@
+.default-enter-active, .default-enter-to {
+  z-index: 200;
+}
+.default-leave-active, .default-leave-to {
+  z-index: 199;
+}
+
+.page-push-enter {
+  transform: translate3d(100%, 0, 0);
+}
+.page-push-enter-active, .page-push-enter-to {
+  z-index: 200;
+}
+.page-push-leave-active, .page-push-leave-to {
+  z-index: 199;
+}
+
+.page-pop-enter {
+  transform: translate3d(-50%, 0, 0);
+}
+.page--pop-enter-active, .page--pop-enter-to {
+  z-index: 200;
+}
+.page-pop-leave-active, .page-pop-leave-to {
+  transform: translate3d(100%, 0, 0);
+  z-index: 199;
+}

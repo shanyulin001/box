@@ -1,0 +1,105 @@
+@import "./var";
+// 重写UI框架的全局样式建议放这里
+
+//------------------ 导航 ------------------
+.van-nav-bar {
+  background-color: #202634;
+  //box-shadow:0 rem(6) rem(28) 0 rgba(#111321,0.4);
+  &:after {
+    display: none;
+  }
+  .van-icon {
+    color: #fff;
+  }
+  .van-nav-bar__title {
+    color: #fff;
+    font-size: rem(32);
+  }
+  .van-nav-bar__left, .van-nav-bar__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+  }
+}
+
+//------------------ 标签栏 ------------------
+.van-tabbar {
+  background-color: #202634;
+  .van-tabbar-item__icon {
+    margin-bottom: 0;
+    img {
+      margin-bottom: 4px;
+      width: rem(46);
+      height: rem(46);
+    }
+  }
+  .van-tabbar-item__text span{
+    font-size: rem(20);
+    color: #676A77;
+  }
+  .van-tabbar-item--active span {
+    color: #fff;
+  }
+  &::after {
+    border: none;
+    box-shadow:0 rem(3) rem(26) rem(1) rgba(#363635,0.14);
+  }
+}
+
+[class*='van-hairline']::after {
+  border-color: rgba(255,255,255,.1);
+}
+
+.van-dialog__message {
+  color: #999;
+}
+
+// input, van-field输入框
+.van-field {
+  //background-color: #282937;
+  background-color: #151924;
+  .van-field__control {
+    color: #fefefe;
+  }
+}
+
+// checkbox
+.van-checkbox {
+  .van-checkbox__icon {
+    img {
+      width: rem(22);
+    }
+  }
+}
+// 单元格
+.van-cell-group {
+  background-color: transparent;
+  border-radius: rem(12);
+  overflow: hidden;
+}
+.van-cell {
+  //background-color: #282937;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.2); /*no*/
+  .van-cell__title {
+    color: rgba(255, 255, 255, .4);
+    max-width: rem(180);
+    text-align: left;
+    word-break: break-all;
+  }
+  .van-cell__value {
+    color: #fff;
+    text-align: left;
+    word-break: break-all;
+  }
+  &:not(:last-child)::after {
+    left: 0;
+    border-color: rgba(255, 255, 255, .25);
+  }
+  &.van-cell--clickable {
+    &:active {
+      background-color: rgba(#282937, .8);
+    }
+  }
+}

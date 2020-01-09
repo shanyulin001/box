@@ -1,0 +1,127 @@
+@import "reset";
+@import "cover";
+@import "transition";
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+  background-color: #151924;
+}
+// ========== van-dialog ==========
+.van-dialog{
+  background-color: #676A71;
+  .van-dialog__message{
+    color: #ffffff;
+  }
+  .van-dialog__footer--buttons{
+    .van-button{
+      background-color: #676A71;
+      border: 1px solid #000000;
+      border-bottom: none;
+      border-left: none;
+      .van-button__text{
+        color: #ffffff;
+      }
+      &:last-child{
+        border-right: none;
+        .van-button__text{
+          color: #FFDD5C;
+        }
+      }
+    }
+  }
+}
+// ========== 按钮 ==========
+._btn {
+  width: 100%;
+  flex: 1;
+  border-radius: 44px;
+  border: none;
+}
+.submit_btn {
+  @extend ._btn;
+  background: linear-gradient(90deg, rgba(255,221,92,1),rgba(255,197,0,1));
+  .van-button__text {
+    color: #fff;
+  }
+}
+.default_btn {
+  @extend ._btn;
+  background-color: #2B2C3A;
+  .van-button__text {
+    color: #fff;
+  }
+}
+// 提示
+.tip {
+  line-height: 1;
+  padding-left: 36px;
+  background: url("assets/home/tip-icon.png") no-repeat left center;
+  background-size: 26px 26px;
+  font-size: 24px;
+  color: #F44D35;
+  &:not(:last-of-type) {
+    margin-bottom: 22px;
+  }
+}
+//.addAddress-icon {
+//  display: inline-block;
+//  width: 32px;
+//  height: 32px;
+//  background: url("assets/user/addAddress-icon.png") no-repeat center;
+//  background-size: 32px 32px;
+//}
+//.album-icon {
+//  display: inline-block;
+//  width: 36px;
+//  height: 28px;
+//  background: url("assets/user/album.png") no-repeat center;
+//  background-size: 36px 28px;
+//}
+.filter-icon {
+  display: inline-block;
+  width: 32px;
+  height: 36px;
+  background: url("assets/familyTree/icon-shaixuan@2x.png") no-repeat center;
+  background-size: 32px 36px;
+}
+.scan-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("assets/user/scan-icon.png") no-repeat center;
+  background-size: 32px 32px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+// 页面，标题固定
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  .wrap {
+    flex: 1;
+    overflow: auto;
+  }
+}
+
+.no-data {
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: $fc1;
+}
+.qr-active {
+  background: transparent!important;
+  opacity: 0!important;
+}
